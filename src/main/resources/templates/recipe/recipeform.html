@@ -12,7 +12,7 @@
 <body>
 <!--/*@thymesVar id="recipe" type="alex.pustovit.recipeapp.domain.Recipe"*/-->
 <div class="container-fluid" style="margin-top: 20px">
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-md-6 col-md-offset-3">
             <form  th:object="${recipe}" th:action="@{/recipe/}"  method="post">
                 <input type="hidden" th:field="*{id}"/>
@@ -127,6 +127,7 @@
                             <div class="row">
                                 <div class="col-md-12 form-group">
                                     <textarea class="form-control" rows="3" th:field="*{notes.recipeNotes}"></textarea>
+                                    <input type="hidden"  th:field="*{notes.id}" ></input>
                                 </div>
                             </div>
                         </div>
